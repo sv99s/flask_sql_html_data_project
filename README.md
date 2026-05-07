@@ -51,7 +51,7 @@ The application can:
 
 ## Main page
 
-![Main Page](screenshots/mainpage.png)
+![Main Page](screenshots/homepage.png)
 
 ## Detail page
 
