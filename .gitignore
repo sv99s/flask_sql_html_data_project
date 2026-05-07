@@ -1,5 +1,16 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
-.venv/
-.vscode/
+*.py[codz]
+*$py.class
+
+# Environments
 .env
-*.pyc
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
