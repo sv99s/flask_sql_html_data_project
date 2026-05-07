@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Central</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='game_style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1 data-text="Game Central">Game Central</h1>
+
+<div class="container game-detail-container">
+
+    <div class="game-title-detail">
+        <h2>{{ game.nome }}</h2>
+    </div>
+
+    {% if game.youtube %}
+    <div class="video-wrapper">
+        <iframe width="70%" height="400" src="{{ game.youtube }}" 
+                title="Gameplay {{ game.nome }}" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+    {% endif %}
+
+<div class="game-info-detail">
+
+    <div class="game-description">
+        {{ game.description | replace('\n', '<br>') | safe }}
+    </div>
+
+    <div class="game-meta">
+        <p><strong>Anno:</strong> {{ game.anno }}</p>
+        <p><strong>Genere:</strong> {{ game.genere }}</p>
+        <p><strong>Voto:</strong> {{ game.voto }}</p>
+        <p><strong>Prezzo:</strong> €{{ game.prezzo }}</p>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
